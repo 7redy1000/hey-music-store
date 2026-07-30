@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Música & Instrumentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎵 Tienda de Música</h1>
+        <p>Los mejores instrumentos y accesorios al mejor precio</p>
+    </header>
+
+    <main class="catalogo">
+
+        <!-- Producto 1 -->
+        <article class="tarjeta-producto">
+            <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400" alt="Guitarra Eléctrica">
+            <h2>Guitarra Eléctrica</h2>
+            <p class="descripcion">Cuerpo sólido, excelente sonido para rock y blues. Incluye funda.</p>
+            <p class="precio">$250 USD</p>
+            <button class="btn-comprar" onclick="agregarAlCarrito('Guitarra Eléctrica')">Añadir al carrito</button>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="tarjeta-producto">
+            <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400" alt="Guitarra Acústica">
+            <h2>Guitarra Acústica</h2>
+            <p class="descripcion">Tono cálido y resonante, ideal para principiantes y avanzados.</p>
+            <p class="precio">$180 USD</p>
+            <button class="btn-comprar" onclick="agregarAlCarrito('Guitarra Acústica')">Añadir al carrito</button>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="tarjeta-producto">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Pedal Overdrive">
+            <h2>Pedal Overdrive</h2>
+            <p class="descripcion">Saturación clásica estilo tubo para empujar tu amplificador al límite.</p>
+            <p class="precio">$65 USD</p>
+            <button class="btn-comprar" onclick="agregarAlCarrito('Pedal Overdrive')">Añadir al carrito</button>
+        </article>
+
+    </main>
+
+    <!-- Notificación del Carrito -->
+    <div id="notificacion" class="notificacion oculta"></div>
+
+    <footer>
+        <p>© 2026 Tienda de Música - Envíos a todo el país</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
