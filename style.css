@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    margin: 10;
+    margin: 0;
     padding: 0;
 }
 
@@ -15,7 +15,7 @@ body {
 
 header {
     background-color: #ffffff;
-    text-align: center;
+    text-align: left;
     padding: 35px 20px;
     border-bottom: 2px solid #00f2fe;
     box-shadow: 0 4px 20px rgba(0, 242, 254, 0.15);
