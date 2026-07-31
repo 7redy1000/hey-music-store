@@ -3,6 +3,155 @@
     margin: 0;
     padding: 0;
 }
+/* ===================== COPIAR DESDE AQUÍ PARA EL CSS === */
+
+/* --- Estilos Generales de Reseteo (por si acaso) --- */
+.ms-header-container * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif; /* Usamos una fuente limpia como la referencia */
+  text-decoration: none;
+}
+
+/* --- 1. Barra Superior (Top Bar) --- */
+.ms-top-bar {
+  background-color: #f8fafc; /* Gris muy claro */
+  border-bottom: 1px solid #e2e8f0;
+  padding: 6px 0;
+  font-size: 11px; /* Texto muy pequeño como en la referencia */
+  color: #64748b;
+}
+
+.ms-top-bar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ms-contact-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.ms-contact-info a {
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ms-contact-info a:hover {
+  color: #334155;
+}
+
+.ms-contact-info i {
+  font-size: 12px;
+}
+
+/* --- 2. Fila Principal del Header (Main Header) --- */
+.ms-main-header {
+  background-color: #ffffff;
+  padding: 15px 0;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.ms-main-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Sección Izquierda: Menú y Logo */
+.ms-left-section {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espacio entre menú y logo */
+}
+
+/* Botón de Menú Hamburguesa (Rojo) */
+.ms-menu-toggle {
+  background-color: #c53030; /* Rojo intenso como la referencia */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+}
+
+.ms-menu-toggle:hover {
+  background-color: #a52828;
+}
+
+/* Estilo del Logo Adaptado "Hey Music Store" */
+.ms-logo-adapted {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.ms-logo-top {
+  font-size: 26px; /* Grande como "MUSIC STORE" */
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #1e293b; /* Casi negro */
+}
+
+.ms-red-text {
+  color: #c53030; /* El rojo de la marca */
+}
+
+.ms-logo-bottom {
+  font-size: 14px; /* Pequeño como "professional" */
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #1e293b;
+  letter-spacing: 2px; /* Un poco más de aire */
+  margin-top: -2px; /* Ajuste fino */
+}
+
+/* Sección Derecha (Para futura expansión - Carrito) */
+.ms-right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ms-icon-btn {
+  color: #c53030;
+  font-size: 24px;
+}
+
+/* --- Media Query para Móviles --- */
+@media (max-width: 768px) {
+  .ms-top-bar {
+    display: none; /* Ocultar barra superior en móviles pequeños */
+  }
+  
+  .ms-logo-top {
+    font-size: 22px;
+  }
+  
+  .ms-logo-bottom {
+    font-size: 12px;
+  }
+}
+/* ========================== HASTA AQUÍ PARA EL CSS === */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
