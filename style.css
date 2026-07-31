@@ -3,7 +3,51 @@
     margin: 0;
     padding: 0;
 }
+/*Desde aqui es el nuevo codigo para la parte de arriba*/
+<div class="ms-header-container">
+  <!-- 1. Barra Superior de Contacto (Top Bar) -->
+  <div class="ms-top-bar">
+    <div class="ms-top-bar-content">
+      <div class="ms-contact-info">
+        <a href="mailto:hola@heymusicstore.com"><i class="fa-regular fa-envelope"></i> hola@heymusicstore.com</a>
+        <span>|</span>
+        <a href="tel:+591XXXXXXXXX"><i class="fa-solid fa-phone"></i> +591 XXX XX XX XX</a> <!-- Ajusta tu teléfono -->
+      </div>
+      <div class="ms-top-bar-right">
+        <!-- Ejemplo de iconos extra o selectores -->
+        <span>Envíos a Bolivia desde 20 Bs.</span>
+      </div>
+    </div>
+  </div>
 
+  <!-- 2. Fila Principal del Logo y Menú (Main Header Row) -->
+  <header class="ms-main-header">
+    <div class="ms-main-header-content">
+      
+      <!-- LADO IZQUIERDO (LO QUE PEDISTE) -->
+      <div class="ms-left-section">
+        <!-- Menú Hamburguesa Rojo -->
+        <button class="ms-menu-toggle" aria-label="Abrir Menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Logo Adaptado "Hey Music Store" -->
+        <div class="ms-logo-adapted">
+          <div class="ms-logo-top">Hey <span class="ms-red-text">Music</span></div>
+          <div class="ms-logo-bottom">Store</div>
+        </div>
+      </div>
+
+      <!-- LADO DERECHO (Para futura expansión - Carrito/Buscar) -->
+      <div class="ms-right-section">
+        <!-- Esto se puede rellenar luego, lo dejo estructurado -->
+        <a href="#" class="ms-icon-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </div>
+  </header>
+
+</div>
+/* Hasta aqui es el nuevo codigo*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ffffff;
