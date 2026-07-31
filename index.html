@@ -1,154 +1,443 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta charset="UTF-8"> <!-- Define la codificación de caracteres para aceptar acentos y caracteres especiales -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive en dispositivos móviles -->
-  <title>Hey Music Store | Tienda Online de Instrumentos</title> <!-- Título que aparece en la pestaña del navegador -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey Music Store | Online Shop for Musical Instruments</title>
   
-  <!-- Enlace a la hoja de estilos CSS externa -->
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- Carga de la librería de iconos FontAwesome (para iconos de teléfono, correo, carrito, búsqueda, etc.) -->
+  <!-- Iconos de FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* RESET Y BASES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    /* 1. TOP BAR */
+    .top-bar {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 6px 0;
+      font-size: 11px;
+    }
+
+    .top-bar-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .top-left a {
+      color: #000000;
+      text-decoration: underline;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .badge-ssl {
+      background-color: #eab308;
+      color: #000;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .top-right {
+      cursor: pointer;
+    }
+
+    /* 2. MAIN HEADER */
+    .main-header {
+      padding: 15px 0;
+      background-color: #ffffff;
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .btn-menu {
+      background-color: #d0021b;
+      color: #ffffff;
+      border: none;
+      width: 42px;
+      height: 40px;
+      font-size: 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-title {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 0.9;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+    .logo-title .red-text {
+      color: #d0021b;
+    }
+
+    .logo-sub {
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #000000;
+    }
+
+    .header-benefits {
+      display: flex;
+      gap: 30px;
+      font-size: 11px;
+      color: #444444;
+    }
+
+    .benefit-item strong {
+      display: block;
+      color: #000000;
+    }
+
+    .btn-cart {
+      background-color: #d0021b;
+      color: #ffffff;
+      border: none;
+      width: 45px;
+      height: 40px;
+      font-size: 18px;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* 3. SEARCH BAR */
+    .search-section {
+      padding-bottom: 15px;
+    }
+
+    .search-flex {
+      display: flex;
+    }
+
+    .search-flex input {
+      width: 100%;
+      padding: 10px 15px;
+      border: 1px solid #cccccc;
+      border-right: none;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .btn-search {
+      background-color: #d0021b;
+      color: #ffffff;
+      border: 1px solid #d0021b;
+      padding: 0 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* 4. BANNER HERO */
+    .banner-hero {
+      background: linear-gradient(90deg, #1a0205 0%, #600c14 50%, #1a0205 100%);
+      height: 280px;
+      position: relative;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .banner-container {
+      max-width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .banner-fame {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-family: 'Georgia', serif;
+      font-size: 36px;
+      font-style: italic;
+      color: #ffffff;
+    }
+
+    .banner-badge {
+      position: absolute;
+      top: 130px;
+      left: 0;
+      background-color: #d0021b;
+      padding: 5px 15px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .banner-text {
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+    }
+
+    .banner-text h2 {
+      font-size: 28px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .banner-text p {
+      font-size: 16px;
+      color: #dddddd;
+    }
+
+    .banner-surprise {
+      position: absolute;
+      top: 30px;
+      right: 180px;
+      font-family: 'Impact', sans-serif;
+      font-size: 32px;
+      color: #ff3333;
+      text-shadow: 1px 1px 0 #ffffff;
+      font-style: italic;
+    }
+
+    .banner-price {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      font-family: 'Impact', sans-serif;
+      font-size: 40px;
+      font-style: italic;
+    }
+
+    .banner-price span {
+      color: #d0021b;
+      font-size: 55px;
+      text-shadow: 2px 2px 0 #ffffff;
+    }
+
+    .slider-dots {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+    }
+
+    .dot.active {
+      background-color: #ffffff;
+    }
+
+    .feedback-tab {
+      position: absolute;
+      right: 0;
+      top: 35%;
+      background-color: #ffcc00;
+      color: #000000;
+      padding: 8px 12px;
+      font-size: 11px;
+      font-weight: bold;
+      writing-mode: vertical-rl;
+      border-radius: 4px 0 0 4px;
+    }
+
+    /* 5. CATEGORIAS */
+    .main-content {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
+    .shop-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #222222;
+      margin-bottom: 25px;
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .cat-card {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border: 1px solid #e5e5e5;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .cat-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+
+    .cat-card span {
+      font-size: 15px;
+      font-weight: bold;
+      color: #111111;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ==================== BARRA SUPERIOR (TOP BAR) ==================== -->
-  <div class="top-bar"> <!-- Contenedor principal de la franja gris superior -->
-    <div class="top-bar-container"> <!-- Contenedor interno para centrar el contenido -->
-      
-      <div class="top-bar-left"> <!-- Lado izquierdo de la barra superior -->
-        <a href="mailto:export@heymusicstore.com"><i class="fa-regular fa-envelope"></i> export@heymusicstore.com</a> <!-- Enlace de correo con icono -->
-        <a href="tel:+59102218884"><i class="fa-solid fa-phone"></i> +591 (0) 221 / 88 84 - 1610</a> <!-- Enlace de teléfono con icono -->
-        <span class="badge-ssl"><i class="fa-solid fa-shield-halved"></i> SSL</span> <!-- Medalla de seguridad SSL -->
+  <!-- 1. BARRA SUPERIOR -->
+  <div class="top-bar">
+    <div class="container top-bar-flex">
+      <div class="top-left">
+        <a href="mailto:export@heymusicstore.com"><i class="fa-regular fa-envelope"></i> export@heymusicstore.com</a>
+        <a href="tel:+59102218884"><i class="fa-solid fa-phone"></i> +591 (0) 221 / 88 84 - 1610</a>
+        <span class="badge-ssl"><i class="fa-solid fa-shield-halved"></i> SSL</span>
       </div>
-      
-      <div class="top-bar-right"> <!-- Lado derecho de la barra superior -->
-        <span class="country-selector">🇺🇸 ▾</span> <!-- Selector de idioma / país simulado -->
+      <div class="top-right">
+        <span>🇺🇸 ▾</span>
       </div>
-      
     </div>
   </div>
 
-  <!-- ==================== CABECERA PRINCIPAL (HEADER) ==================== -->
-  <header class="main-header"> <!-- Sección donde va el menú, el logo y los beneficios -->
-    <div class="main-header-container"> <!-- Limita el ancho y centra el contenido -->
+  <!-- 2. CABECERA PRINCIPAL -->
+  <header class="main-header">
+    <div class="container header-flex">
       
-      <!-- Lado izquierdo: Botón de menú hamburguesa y Logo -->
-      <div class="header-brand-group">
-        <button class="menu-btn"><i class="fa-solid fa-bars"></i></button> <!-- Botón rojo con icono de 3 líneas -->
-        
-        <div class="logo"> <!-- Estructura del logo con tipografía mixta -->
-          <h1>HEY MUSIC <span class="logo-red">STORE</span></h1> <!-- Texto principal del logo en negrita -->
-          <span class="logo-subtitle">professional</span> <!-- Subtítulo del logo en texto fino -->
+      <div class="brand-group">
+        <button class="btn-menu"><i class="fa-solid fa-bars"></i></button>
+        <div class="logo-text">
+          <div class="logo-title">MUSIC <span class="red-text">STORE</span></div>
+          <div class="logo-sub">professional</div>
         </div>
       </div>
 
-      <!-- Centro: Texto publicitario/beneficios (Shipping, Products, Money Back) -->
       <div class="header-benefits">
         <div class="benefit-item">
-          <strong>Envíos a todo el país</strong> <!-- Texto en negrita -->
-          <small>desde Bs. 20</small> <!-- Texto explicativo más pequeño -->
+          <strong>Shipping to USA</strong>
+          <small>from 44 USD</small>
         </div>
         <div class="benefit-item">
-          <strong>55.000 productos</strong>
-          <small>listos para envío</small>
+          <strong>55.000 products</strong>
+          <small>ready for shipment</small>
         </div>
         <div class="benefit-item">
-          <strong>Garantía de devolución</strong>
-          <small>30 días de prueba</small>
+          <strong>Money Back</strong>
+          <small>30 Day Return Policy</small>
         </div>
       </div>
 
-      <!-- Lado derecho: Botón del Carrito de Compras -->
-      <div class="header-cart">
-        <button class="cart-btn">
-          <i class="fa-solid fa-cart-shopping"></i> <!-- Icono del carrito de compras -->
-        </button>
-      </div>
+      <button class="btn-cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
 
     </div>
   </header>
 
-  <!-- ==================== BARRA DE BÚSQUEDA ==================== -->
-  <div class="search-section"> <!-- Contenedor de la barra de búsqueda que abarca el ancho completo -->
-    <div class="search-container"> <!-- Alineado horizontalmente con el resto de la página -->
-      <input type="text" placeholder="Enter search term ..."> <!-- Campo de texto donde el usuario escribe -->
-      <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button> <!-- Botón rojo con lupa -->
+  <!-- 3. BÚSQUEDA -->
+  <div class="search-section">
+    <div class="container search-flex">
+      <input type="text" placeholder="Enter search term ...">
+      <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
   </div>
 
-  <!-- ==================== BANNER HERO (CARRUSEL SLIDER) ==================== -->
-  <section class="hero-banner"> <!-- Sección promocional de la guitarra / oferta -->
-    <div class="hero-container"> <!-- Mantiene los elementos dentro de los límites visuales -->
+  <!-- 4. BANNER HERO -->
+  <section class="banner-hero">
+    <div class="banner-container">
+      <div class="banner-fame">Fame</div>
+      <div class="banner-badge">BRANDNEW!</div>
       
-      <!-- Marca en la esquina superior izquierda sobre la imagen -->
-      <div class="banner-brand">Fame</div>
-      
-      <!-- Insignia roja de producto destacado -->
-      <div class="badge-red">BRANDNEW!</div>
-      
-      <!-- Información del producto promocionado en el banner -->
-      <div class="banner-info">
-        <h2>Fame Custom Line</h2> <!-- Nombre principal de la guitarra promocionada -->
-        <p>Amazing guitars at great prices!</p> <!-- Eslogan publicitario -->
-      </div>
-      
-      <!-- Texto promocional al lado derecho -->
-      <div class="banner-tagline">What a surprise...!</div>
-      
-      <!-- Precio en la parte inferior derecha -->
-      <div class="banner-price">only <span>Bs. 659</span></div>
-      
-      <!-- Puntos de navegación del carrusel en la parte inferior centrada -->
-      <div class="slider-dots">
-        <span class="dot"></span> <!-- Punto 1 inactivo -->
-        <span class="dot active"></span> <!-- Punto 2 activo (blanco relleno) -->
-        <span class="dot"></span> <!-- Punto 3 inactivo -->
-      </div>
-      
-      <!-- Pestaña lateral derecha de comentarios/feedback -->
-      <div class="feedback-tab">
-        <i class="fa-solid fa-circle-info"></i> Your Feedback <!-- Texto vertical de sugerencias -->
+      <div class="banner-text">
+        <h2>Fame Custom Line</h2>
+        <p>Amazing guitars at great prices!</p>
       </div>
 
+      <div class="banner-surprise">What a surprise...!</div>
+      <div class="banner-price">only <span>$659</span></div>
+
+      <div class="slider-dots">
+        <span class="dot"></span>
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="feedback-tab">
+        <i class="fa-solid fa-circle-info"></i> Your Feedback
+      </div>
     </div>
   </section>
 
-  <!-- ==================== SECCIÓN DE CATEGORÍAS ==================== -->
-  <main class="main-content"> <!-- Contenido principal del cuerpo de la página -->
-    
-    <!-- Título principal inferior -->
-    <h2 class="section-title">HEY MUSIC STORE professional - Online Shop for Musical Instruments</h2>
-    
-    <!-- Cuadrícula de categorías rápidas -->
-    <div class="categories-grid">
-      
-      <!-- Categoría 1: Guitarras -->
-      <div class="category-card">
-        <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?q=80&w=200" alt="Guitars"> <!-- Foto miniatura -->
-        <span>Guitars</span> <!-- Etiqueta de la categoría -->
-      </div>
+  <!-- 5. CATEGORÍAS -->
+  <main class="container main-content">
+    <h2 class="shop-title">MUSIC STORE professional - Online Shop for Musical Instruments</h2>
 
-      <!-- Categoría 2: Bajos -->
-      <div class="category-card">
+    <div class="categories-grid">
+      <div class="cat-card">
+        <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?q=80&w=200" alt="Guitars">
+        <span>Guitars</span>
+      </div>
+      <div class="cat-card">
         <img src="https://images.unsplash.com/photo-1550985616-10810253b84d?q=80&w=200" alt="Basses">
         <span>Basses</span>
       </div>
-
-      <!-- Categoría 3: Baterías -->
-      <div class="category-card">
+      <div class="cat-card">
         <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=80&w=200" alt="Drums">
         <span>Drums</span>
       </div>
-
-      <!-- Categoría 4: Teclados -->
-      <div class="category-card">
-        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=200" alt="Keys & Synth">
+      <div class="cat-card">
+        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=200" alt="Keys">
         <span>Keys & Synth</span>
       </div>
-
     </div>
   </main>
 
