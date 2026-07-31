@@ -1,167 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Música & Instrumentos</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"> <!-- Define la codificación de caracteres para aceptar acentos y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive en dispositivos móviles -->
+  <title>Hey Music Store | Tienda Online de Instrumentos</title> <!-- Título que aparece en la pestaña del navegador -->
+  
+  <!-- Enlace a la hoja de estilos CSS externa -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Carga de la librería de iconos FontAwesome (para iconos de teléfono, correo, carrito, búsqueda, etc.) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    /* -------------------Desde aqui es el nuevo codigo para la parte de arriba*/
-<div class="ms-header-container">
-  <!-- 1. Barra Superior de Contacto (Top Bar) -->
-  <div class="ms-top-bar">
-    <div class="ms-top-bar-content">
-      <div class="ms-contact-info">
-        <a href="mailto:hola@heymusicstore.com"><i class="fa-regular fa-envelope"></i> hola@heymusicstore.com</a>
-        <span>|</span>
-        <a href="tel:+591XXXXXXXXX"><i class="fa-solid fa-phone"></i> +591 XXX XX XX XX</a> <!-- Ajusta tu teléfono -->
+
+  <!-- ==================== BARRA SUPERIOR (TOP BAR) ==================== -->
+  <div class="top-bar"> <!-- Contenedor principal de la franja gris superior -->
+    <div class="top-bar-container"> <!-- Contenedor interno para centrar el contenido -->
+      
+      <div class="top-bar-left"> <!-- Lado izquierdo de la barra superior -->
+        <a href="mailto:export@heymusicstore.com"><i class="fa-regular fa-envelope"></i> export@heymusicstore.com</a> <!-- Enlace de correo con icono -->
+        <a href="tel:+59102218884"><i class="fa-solid fa-phone"></i> +591 (0) 221 / 88 84 - 1610</a> <!-- Enlace de teléfono con icono -->
+        <span class="badge-ssl"><i class="fa-solid fa-shield-halved"></i> SSL</span> <!-- Medalla de seguridad SSL -->
       </div>
-      <div class="ms-top-bar-right">
-        <!-- Ejemplo de iconos extra o selectores -->
-        <span>Envíos a Bolivia desde 20 Bs.</span>
+      
+      <div class="top-bar-right"> <!-- Lado derecho de la barra superior -->
+        <span class="country-selector">🇺🇸 ▾</span> <!-- Selector de idioma / país simulado -->
       </div>
+      
     </div>
   </div>
 
-  <!-- 2. Fila Principal del Logo y Menú (Main Header Row) -->
-  <header class="ms-main-header">
-    <div class="ms-main-header-content">
+  <!-- ==================== CABECERA PRINCIPAL (HEADER) ==================== -->
+  <header class="main-header"> <!-- Sección donde va el menú, el logo y los beneficios -->
+    <div class="main-header-container"> <!-- Limita el ancho y centra el contenido -->
       
-      <!-- LADO IZQUIERDO (LO QUE PEDISTE) -->
-      <div class="ms-left-section">
-        <!-- Menú Hamburguesa Rojo -->
-        <button class="ms-menu-toggle" aria-label="Abrir Menú">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <!-- Logo Adaptado "Hey Music Store" -->
-        <div class="ms-logo-adapted">
-          <div class="ms-logo-top">Hey <span class="ms-red-text">Music</span></div>
-          <div class="ms-logo-bottom">Store</div>
+      <!-- Lado izquierdo: Botón de menú hamburguesa y Logo -->
+      <div class="header-brand-group">
+        <button class="menu-btn"><i class="fa-solid fa-bars"></i></button> <!-- Botón rojo con icono de 3 líneas -->
+        
+        <div class="logo"> <!-- Estructura del logo con tipografía mixta -->
+          <h1>HEY MUSIC <span class="logo-red">STORE</span></h1> <!-- Texto principal del logo en negrita -->
+          <span class="logo-subtitle">professional</span> <!-- Subtítulo del logo en texto fino -->
         </div>
       </div>
 
-      <!-- LADO DERECHO (Para futura expansión - Carrito/Buscar) -->
-      <div class="ms-right-section">
-        <!-- Esto se puede rellenar luego, lo dejo estructurado -->
-        <a href="#" class="ms-icon-btn"><i class="fa-solid fa-cart-shopping"></i></a>
+      <!-- Centro: Texto publicitario/beneficios (Shipping, Products, Money Back) -->
+      <div class="header-benefits">
+        <div class="benefit-item">
+          <strong>Envíos a todo el país</strong> <!-- Texto en negrita -->
+          <small>desde Bs. 20</small> <!-- Texto explicativo más pequeño -->
+        </div>
+        <div class="benefit-item">
+          <strong>55.000 productos</strong>
+          <small>listos para envío</small>
+        </div>
+        <div class="benefit-item">
+          <strong>Garantía de devolución</strong>
+          <small>30 días de prueba</small>
+        </div>
       </div>
+
+      <!-- Lado derecho: Botón del Carrito de Compras -->
+      <div class="header-cart">
+        <button class="cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i> <!-- Icono del carrito de compras -->
+        </button>
+      </div>
+
     </div>
   </header>
 
-</div>
-/* -------------Hasta aqui es el nuevo codigo*/
+  <!-- ==================== BARRA DE BÚSQUEDA ==================== -->
+  <div class="search-section"> <!-- Contenedor de la barra de búsqueda que abarca el ancho completo -->
+    <div class="search-container"> <!-- Alineado horizontalmente con el resto de la página -->
+      <input type="text" placeholder="Enter search term ..."> <!-- Campo de texto donde el usuario escribe -->
+      <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button> <!-- Botón rojo con lupa -->
+    </div>
+  </div>
+
+  <!-- ==================== BANNER HERO (CARRUSEL SLIDER) ==================== -->
+  <section class="hero-banner"> <!-- Sección promocional de la guitarra / oferta -->
+    <div class="hero-container"> <!-- Mantiene los elementos dentro de los límites visuales -->
+      
+      <!-- Marca en la esquina superior izquierda sobre la imagen -->
+      <div class="banner-brand">Fame</div>
+      
+      <!-- Insignia roja de producto destacado -->
+      <div class="badge-red">BRANDNEW!</div>
+      
+      <!-- Información del producto promocionado en el banner -->
+      <div class="banner-info">
+        <h2>Fame Custom Line</h2> <!-- Nombre principal de la guitarra promocionada -->
+        <p>Amazing guitars at great prices!</p> <!-- Eslogan publicitario -->
+      </div>
+      
+      <!-- Texto promocional al lado derecho -->
+      <div class="banner-tagline">What a surprise...!</div>
+      
+      <!-- Precio en la parte inferior derecha -->
+      <div class="banner-price">only <span>Bs. 659</span></div>
+      
+      <!-- Puntos de navegación del carrusel en la parte inferior centrada -->
+      <div class="slider-dots">
+        <span class="dot"></span> <!-- Punto 1 inactivo -->
+        <span class="dot active"></span> <!-- Punto 2 activo (blanco relleno) -->
+        <span class="dot"></span> <!-- Punto 3 inactivo -->
+      </div>
+      
+      <!-- Pestaña lateral derecha de comentarios/feedback -->
+      <div class="feedback-tab">
+        <i class="fa-solid fa-circle-info"></i> Your Feedback <!-- Texto vertical de sugerencias -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECCIÓN DE CATEGORÍAS ==================== -->
+  <main class="main-content"> <!-- Contenido principal del cuerpo de la página -->
     
-    <header>
-        <h1><b>Hey Music Store</b></h1>
-        <h3> Tienda Online</h3>
-        <p>Los mejores instrumentos y accesorios al mejor precio</p>
-    </header>
+    <!-- Título principal inferior -->
+    <h2 class="section-title">HEY MUSIC STORE professional - Online Shop for Musical Instruments</h2>
+    
+    <!-- Cuadrícula de categorías rápidas -->
+    <div class="categories-grid">
+      
+      <!-- Categoría 1: Guitarras -->
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?q=80&w=200" alt="Guitars"> <!-- Foto miniatura -->
+        <span>Guitars</span> <!-- Etiqueta de la categoría -->
+      </div>
 
-    <main class="catalogo">
+      <!-- Categoría 2: Bajos -->
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1550985616-10810253b84d?q=80&w=200" alt="Basses">
+        <span>Basses</span>
+      </div>
 
-        <!-- Producto 1 -->
-        <article class="tarjeta-producto">
-            <img scr="https://tienda.dunamisbolivia.com/wp-content/uploads/2026/02/EB-P02223-8.jpg" alt="Cuerdas de Guitarra Eléctrica">
-            <h2>Guitarra Eléctrica</h2>
-            <p class="descripcion">Super Slinky Nickel Wound Guitarra Electrica</p>
-            <p class="precio">Bs. 120</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Guitarra Eléctrica')">Añadir al carrito</button>
-        </article>
+      <!-- Categoría 3: Baterías -->
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=80&w=200" alt="Drums">
+        <span>Drums</span>
+      </div>
 
-        <!-- Producto 2 -->
-        <article class="tarjeta-producto">
-            <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=400" alt="Guitarra Acústica">
-            <h2>Guitarra Acústica</h2>
-            <p class="descripcion">Tono cálido y resonante, ideal para principiantes y avanzados.</p>
-            <p class="precio">Bs. 120</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Guitarra Acústica')">Añadir al carrito</button>
-        </article>
+      <!-- Categoría 4: Teclados -->
+      <div class="category-card">
+        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=200" alt="Keys & Synth">
+        <span>Keys & Synth</span>
+      </div>
 
-        <!-- Producto 3 -->
-        <article class="tarjeta-producto">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Pedal Overdrive">
-            <h2>Pedal Overdrive</h2>
-            <p class="descripcion">Saturación clásica estilo tubo para empujar tu amplificador al límite.</p>
-            <p class="precio">Bs. 120</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Pedal Overdrive')">Añadir al carrito</button>
-        </article>
-        <!-- Producto 4 -->
-        <article class="tarjeta-producto">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Pedal Overdrive">
-            <h2>Pedal Overdrive</h2>
-            <p class="descripcion">Saturación clásica estilo tubo para empujar tu amplificador al límite.</p>
-            <p class="precio">Bs. 120</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Pedal Overdrive')">Añadir al carrito</button>
-        </article>
-        <!-- Producto 5 -->
-        <article class="tarjeta-producto">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Pedal Overdrive">
-            <h2>Pedal Overdrive</h2>
-            <p class="descripcion">Saturación clásica estilo tubo para empujar tu amplificador al límite.</p>
-            <p class="precio">Bs. 120</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Pedal Overdrive')">Añadir al carrito</button>
-        </article>
-        
- <!-- Producto 6 -->
-        <article class="tarjeta-producto">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Pedal Overdrive">
-            <h2>Pedal Overdrive</h2>
-            <p class="descripcion">Saturación clásica estilo tubo para empujar tu amplificador al límite.</p>
-            <p class="precio">$65 USD</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Pedal Overdrive')">Añadir al carrito</button>
-        </article>
-    <!-- Producto 7 -->
-        <article class="tarjeta-producto">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Pedal Overdrive">
-            <h2>Pedal Overdrive</h2>
-            <p class="descripcion">Saturación clásica estilo tubo para empujar tu amplificador al límite.</p>
-            <p class="precio">$65 USD</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Pedal Overdrive')">Añadir al carrito</button>
-        </article>
-        <!-- Producto 8 -->
-        <article class="tarjeta-producto">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Pedal Overdrive">
-            <h2>Pedal Overdrive</h2>
-            <p class="descripcion">Saturación clásica estilo tubo para empujar tu amplificador al límite.</p>
-            <p class="precio">$65 USD</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Pedal Overdrive')">Añadir al carrito</button>
-        </article>
-        <!-- Producto 9 -->
-        <article class="tarjeta-producto">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Pedal Overdrive">
-            <h2>Pedal Overdrive</h2>
-            <p class="descripcion">Saturación clásica estilo tubo para empujar tu amplificador al límite.</p>
-            <p class="precio">$65 USD</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Pedal Overdrive')">Añadir al carrito</button>
-        </article>
-        <!-- Producto 10 -->
-        <article class="tarjeta-producto">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Pedal Overdrive">
-            <h2>Pedal Overdrive</h2>
-            <p class="descripcion">Saturación clásica estilo tubo para empujar tu amplificador al límite.</p>
-            <p class="precio">$65 USD</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Pedal Overdrive')">Añadir al carrito</button>
-        </article>
-        <!-- Producto 11 -->
-        <article class="tarjeta-producto">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400" alt="Pedal Overdrive">
-            <h2>Pedal Overdrive</h2>
-            <p class="descripcion">Saturación clásica estilo tubo para empujar tu amplificador al límite.</p>
-            <p class="precio">$65 USD</p>
-            <button class="btn-comprar" onclick="agregarAlCarrito('Pedal Overdrive')">Añadir al carrito</button>
-        </article>
+    </div>
+  </main>
 
-    </main>
-
-    <!-- Notificación del Carrito -->
-    <div id="notificacion" class="notificacion oculta"></div>
-
-    <footer>
-        <p>© 2026 Tienda de Música - Envíos a todo el país</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
