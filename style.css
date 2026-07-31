@@ -1,236 +1,258 @@
-/* ==================== RESET Y REGLAS BÁSICAS ==================== */
+/* ==================== RESET Y CONFIGURACIÓN BÁSICA ==================== */
 * {
-  box-sizing: border-box; /* Incluye rellenos y bordes en el tamaño total del elemento */
-  margin: 0; /* Elimina márgenes por defecto del navegador */
-  padding: 0; /* Elimina rellenos por defecto del navegador */
-  font-family: Arial, Helvetica, sans-serif; /* Define la tipografía limpia utilizada en la imagen */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: #ffffff; /* Fondo completamente blanco de la página */
-  color: #333333; /* Color predeterminado para el texto */
+  background-color: #ffffff;
+  color: #333333;
 }
 
-/* ==================== BARRA SUPERIOR (TOP BAR) ==================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==================== 1. BARRA SUPERIOR (TOP BAR) ==================== */
 .top-bar {
-  background-color: #ffffff; /* Fondo blanco */
-  border-bottom: 1px solid #e5e5e5; /* Línea gris clara divisoria inferior */
-  padding: 6px 0; /* Relleno vertical arriba y abajo */
-  font-size: 11px; /* Tamaño de fuente pequeño según la imagen de referencia */
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 6px 0;
+  font-size: 11px;
 }
 
-.top-bar-container {
-  max-width: 1200px; /* Ancho máximo del contenido central */
-  margin: 0 auto; /* Centra horizontalmente el contenedor */
-  padding: 0 15px; /* Espaciado lateral de seguridad */
-  display: flex; /* Habilita el modo de diseño flexible */
-  justify-content: space-between; /* Empuja un grupo a la izquierda y otro a la derecha */
-  align-items: center; /* Alinea los elementos verticalmente al centro */
+.top-bar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.top-bar-left a {
-  color: #000000; /* Texto de los enlaces en color negro */
-  text-decoration: underline; /* Subraya los enlaces tal como se observa en la captura */
-  margin-right: 15px; /* Separación entre el correo y el teléfono */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-left a {
+  color: #000000;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .badge-ssl {
-  background-color: #eab308; /* Fondo dorado/amarillo del sello SSL */
-  color: #000000; /* Texto negro */
-  padding: 2px 6px; /* Relleno interno del sello */
-  border-radius: 10px; /* Bordes totalmente redondeados */
-  font-weight: bold; /* Texto en negrita */
-}
-
-/* ==================== CABECERA PRINCIPAL (HEADER) ==================== */
-.main-header {
-  padding: 15px 0; /* Separación vertical interna para el header */
-  background-color: #ffffff; /* Fondo blanco */
-}
-
-.main-header-container {
-  max-width: 1200px; /* Ancho máximo centrado */
-  margin: 0 auto; /* Centrado automático */
-  padding: 0 15px; /* Relleno lateral */
-  display: flex; /* Disposición en línea de los 3 bloques principales */
-  justify-content: space-between; /* Distribuye el espacio entre los 3 bloques */
-  align-items: center; /* Alineación vertical al centro */
-}
-
-.header-brand-group {
-  display: flex; /* Junta el menú hamburguesa y el logo uno al lado del otro */
+  background-color: #eab308;
+  color: #000000;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
   align-items: center;
-  gap: 15px; /* Espacio de 15px entre el botón rojo y el logo */
+  gap: 4px;
 }
 
-.menu-btn {
-  background-color: #d0021b; /* Rojo intenso característico de Music Store */
-  color: #ffffff; /* Icono blanco */
-  border: none; /* Sin borde exterior */
-  width: 42px; /* Ancho fijo del botón */
-  height: 40px; /* Altura fija del botón */
-  font-size: 20px; /* Tamaño del icono */
-  border-radius: 3px; /* Esquinas ligeramente redondeadas */
-  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+.top-right {
+  cursor: pointer;
 }
 
-.logo h1 {
-  font-size: 26px; /* Tamaño grande de la marca */
-  font-weight: 900; /* Fuente ultra negrita */
-  letter-spacing: -1px; /* Junta ligeramente las letras */
-  line-height: 0.9; /* Reduce la altura entre líneas */
-  color: #000000; /* Texto en negro */
+/* ==================== 2. CABECERA PRINCIPAL (HEADER) ==================== */
+.main-header {
+  padding: 15px 0;
+  background-color: #ffffff;
 }
 
-.logo-red {
-  color: #d0021b; /* Cambia a rojo la palabra STORE */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo-subtitle {
-  display: block; /* Ocupa su propia línea debajo del nombre */
-  font-size: 13px; /* Tamaño más pequeño */
-  font-weight: bold; /* En negrita */
-  letter-spacing: 2px; /* Separación entre letras */
-  margin-left: 2px; /* Alineamiento fino */
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-menu {
+  background-color: #d0021b;
+  color: #ffffff;
+  border: none;
+  width: 42px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 0.9;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.logo-title .red-text {
+  color: #d0021b;
+}
+
+.logo-sub {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #000000;
 }
 
 .header-benefits {
-  display: flex; /* Alinea los tres avisos en horizontal */
-  gap: 25px; /* Separación entre avisos de envío y productos */
-  font-size: 11px; /* Tamaño de fuente compacto */
-  color: #444444; /* Gris oscuro para el texto secundario */
+  display: flex;
+  gap: 30px;
+  font-size: 11px;
+  color: #444444;
 }
 
 .benefit-item strong {
-  display: block; /* El título del aviso aparece arriba */
-  color: #000000; /* Texto en negro puro */
+  display: block;
+  color: #000000;
 }
 
-.cart-btn {
-  background-color: #d0021b; /* Fondo rojo igual al botón de menú */
-  color: #ffffff; /* Icono del carrito en blanco */
+.btn-cart {
+  background-color: #d0021b;
+  color: #ffffff;
   border: none;
-  width: 50px; /* Botón de carrito más ancho */
+  width: 45px;
   height: 40px;
   font-size: 18px;
   border-radius: 3px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ==================== BARRA DE BÚSQUEDA ==================== */
+/* ==================== 3. BARRA DE BÚSQUEDA ==================== */
 .search-section {
-  padding-bottom: 15px; /* Margen inferior antes del banner promocional */
+  padding-bottom: 15px;
 }
 
-.search-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex; /* Conecta el input y el botón en una sola pieza */
+.search-flex {
+  display: flex;
 }
 
-.search-container input {
-  width: 100%; /* Ocupa todo el espacio horizontal disponible */
-  padding: 10px 15px; /* Relleno interno para escribir cómodo */
-  border: 1px solid #cccccc; /* Borde gris claro */
-  border-right: none; /* Elimina el borde derecho para unirlo al botón */
-  outline: none; /* Quita el marco azul al hacer clic */
+.search-flex input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #cccccc;
+  border-right: none;
+  outline: none;
   font-size: 14px;
 }
 
-.search-btn {
-  background-color: #d0021b; /* Botón rojo de búsqueda */
-  color: #ffffff; /* Icono blanco */
+.btn-search {
+  background-color: #d0021b;
+  color: #ffffff;
   border: 1px solid #d0021b;
   padding: 0 20px;
   cursor: pointer;
   font-size: 16px;
 }
 
-/* ==================== BANNER HERO (IMAGEN Y OFERTA) ==================== */
-.hero-banner {
-  background: linear-gradient(90deg, #1a0205 0%, #75151e 40%, #2e0508 100%); /* Fondo degradado vinotinto/oscuro emulando la foto */
-  height: 280px; /* Altura fija del banner promocional */
-  position: relative; /* Permite posicionar elementos secundarios de forma absoluta adentro */
-  color: #ffffff; /* Todo el texto en blanco */
-  overflow: hidden; /* Corta cualquier elemento sobrante */
+/* ==================== 4. BANNER HERO ==================== */
+.banner-hero {
+  background: linear-gradient(90deg, #1a0205 0%, #600c14 50%, #1a0205 100%);
+  height: 280px;
+  position: relative;
+  color: #ffffff;
+  overflow: hidden;
 }
 
-.hero-container {
+.banner-container {
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
-  position: relative; /* Referencia de posición para los textos dentro del contenedor */
+  position: relative;
 }
 
-.banner-brand {
+.banner-fame {
   position: absolute;
-  top: 15px;
+  top: 20px;
   left: 20px;
-  font-family: 'Georgia', serif; /* Fuente cursiva elegida para simular el logo "Fame" */
-  font-size: 32px;
+  font-family: 'Georgia', serif;
+  font-size: 36px;
   font-style: italic;
+  color: #ffffff;
 }
 
-.badge-red {
+.banner-badge {
   position: absolute;
   top: 130px;
   left: 0;
-  background-color: #d0021b; /* Etiqueta roja pegada al lado izquierdo */
+  background-color: #d0021b;
   padding: 5px 15px;
   font-weight: bold;
   font-size: 14px;
-  transform: skewX(-10deg); /* Inclina la etiqueta sutilmente en diagonal */
 }
 
-.banner-info {
+.banner-text {
   position: absolute;
-  bottom: 45px;
+  bottom: 40px;
   left: 20px;
 }
 
-.banner-info h2 {
+.banner-text h2 {
   font-size: 28px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Sombra negra detrás del texto para alta legibilidad */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
-.banner-info p {
+.banner-text p {
   font-size: 16px;
   color: #dddddd;
 }
 
-.banner-tagline {
+.banner-surprise {
   position: absolute;
-  top: 25px;
+  top: 30px;
   right: 180px;
   font-family: 'Impact', sans-serif;
-  font-size: 28px;
+  font-size: 32px;
   color: #ff3333;
-  text-shadow: 1px 1px 0 #ffffff; /* Sombra blanca que crea el efecto de delineado */
+  text-shadow: 1px 1px 0 #ffffff;
   font-style: italic;
 }
 
 .banner-price {
   position: absolute;
-  bottom: 25px;
+  bottom: 30px;
   right: 30px;
   font-family: 'Impact', sans-serif;
-  font-size: 45px;
-  color: #ffffff;
+  font-size: 40px;
   font-style: italic;
 }
 
 .banner-price span {
-  color: #d0021b; /* Hace resaltar el precio en rojo */
-  text-shadow: 2px 2px 0 #ffffff; /* Efecto de texto con borde blanco */
+  color: #d0021b;
   font-size: 55px;
+  text-shadow: 2px 2px 0 #ffffff;
 }
 
 .slider-dots {
   position: absolute;
   bottom: 15px;
   left: 50%;
-  transform: translateX(-50%); /* Centra los 3 puntos exactamente al medio */
+  transform: translateX(-50%);
   display: flex;
   gap: 8px;
 }
@@ -239,34 +261,33 @@ body {
   width: 12px;
   height: 12px;
   border: 1px solid #ffffff;
-  border-radius: 50%; /* Transforma los divs cuadrados en círculos perfectos */
+  border-radius: 50%;
 }
 
 .dot.active {
-  background-color: #ffffff; /* El punto activo se rellena completamente de blanco */
+  background-color: #ffffff;
 }
 
 .feedback-tab {
   position: absolute;
   right: 0;
-  top: 30%;
-  background-color: #ffcc00; /* Fondo amarillo vertical derecho */
+  top: 35%;
+  background-color: #ffcc00;
   color: #000000;
   padding: 8px 12px;
   font-size: 11px;
   font-weight: bold;
-  writing-mode: vertical-rl; /* Gira el texto verticalmente */
+  writing-mode: vertical-rl;
   border-radius: 4px 0 0 4px;
 }
 
-/* ==================== CONTENIDO PRINCIPAL Y CATEGORÍAS ==================== */
+/* ==================== 5. SECCIÓN DE CATEGORÍAS ==================== */
 .main-content {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 15px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
-.section-title {
+.shop-title {
   font-size: 18px;
   font-weight: bold;
   color: #222222;
@@ -274,28 +295,49 @@ body {
 }
 
 .categories-grid {
-  display: grid; /* Sistema de cuadrícula moderno de CSS */
-  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales idénticas a la imagen */
-  gap: 20px; /* Separación horizontal y vertical entre tarjetas de producto */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-.category-card {
+.cat-card {
   display: flex;
-  align-items: center; /* Alinea verticalmente la imagen y la etiqueta */
+  align-items: center;
   gap: 15px;
-  border: 1px solid #ffffff;
+  border: 1px solid #e5e5e5;
   padding: 10px;
   cursor: pointer;
 }
 
-.category-card img {
-  width: 60px; /* Ancho de la miniatura del instrumento */
-  height: 60px; /* Alto de la miniatura */
-  object-fit: contain; /* Asegura que la imagen no se deforme al adaptarse al tamaño */
+.cat-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
 }
 
-.category-card span {
+.cat-card span {
   font-size: 15px;
   font-weight: bold;
   color: #111111;
+}
+
+/* ==================== ADAPTACIÓN MÓVIL (RESPONSIVE) ==================== */
+@media (max-width: 768px) {
+  .header-benefits, 
+  .banner-surprise, 
+  .top-left a:nth-child(2) {
+    display: none;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner-price {
+    font-size: 28px;
+  }
+
+  .banner-price span {
+    font-size: 38px;
+  }
 }
