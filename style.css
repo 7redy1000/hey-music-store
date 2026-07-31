@@ -1,288 +1,301 @@
+/* ==================== RESET Y REGLAS BÁSICAS ==================== */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box; /* Incluye rellenos y bordes en el tamaño total del elemento */
+  margin: 0; /* Elimina márgenes por defecto del navegador */
+  padding: 0; /* Elimina rellenos por defecto del navegador */
+  font-family: Arial, Helvetica, sans-serif; /* Define la tipografía limpia utilizada en la imagen */
 }
-/* ===================== COPIAR DESDE AQUÍ PARA EL CSS === */
-
-/* --- Estilos Generales de Reseteo (por si acaso) --- */
-.ms-header-container * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif; /* Usamos una fuente limpia como la referencia */
-  text-decoration: none;
-}
-
-/* --- 1. Barra Superior (Top Bar) --- */
-.ms-top-bar {
-  background-color: #f8fafc; /* Gris muy claro */
-  border-bottom: 1px solid #e2e8f0;
-  padding: 6px 0;
-  font-size: 11px; /* Texto muy pequeño como en la referencia */
-  color: #64748b;
-}
-
-.ms-top-bar-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.ms-contact-info {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.ms-contact-info a {
-  color: #64748b;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.ms-contact-info a:hover {
-  color: #334155;
-}
-
-.ms-contact-info i {
-  font-size: 12px;
-}
-
-/* --- 2. Fila Principal del Header (Main Header) --- */
-.ms-main-header {
-  background-color: #ffffff;
-  padding: 15px 0;
-  border-bottom: 2px solid #e2e8f0;
-}
-
-.ms-main-header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Sección Izquierda: Menú y Logo */
-.ms-left-section {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* Espacio entre menú y logo */
-}
-
-/* Botón de Menú Hamburguesa (Rojo) */
-.ms-menu-toggle {
-  background-color: #c53030; /* Rojo intenso como la referencia */
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-}
-
-.ms-menu-toggle:hover {
-  background-color: #a52828;
-}
-
-/* Estilo del Logo Adaptado "Hey Music Store" */
-.ms-logo-adapted {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.ms-logo-top {
-  font-size: 26px; /* Grande como "MUSIC STORE" */
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  color: #1e293b; /* Casi negro */
-}
-
-.ms-red-text {
-  color: #c53030; /* El rojo de la marca */
-}
-
-.ms-logo-bottom {
-  font-size: 14px; /* Pequeño como "professional" */
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #1e293b;
-  letter-spacing: 2px; /* Un poco más de aire */
-  margin-top: -2px; /* Ajuste fino */
-}
-
-/* Sección Derecha (Para futura expansión - Carrito) */
-.ms-right-section {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.ms-icon-btn {
-  color: #c53030;
-  font-size: 24px;
-}
-
-/* --- Media Query para Móviles --- */
-@media (max-width: 768px) {
-  .ms-top-bar {
-    display: none; /* Ocultar barra superior en móviles pequeños */
-  }
-  
-  .ms-logo-top {
-    font-size: 22px;
-  }
-  
-  .ms-logo-bottom {
-    font-size: 12px;
-  }
-}
-/* ========================== HASTA AQUÍ PARA EL CSS === */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff;
-    color: #1e293b;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
- /*Sub titulo - Tienda Online*/
-header {
-    background-color: #ffffff;
-    text-align: left;
-    padding: 35px 20px;
-    border-bottom: 2px solid #00f2fe;
-    box-shadow: 0 4px 20px rgba(0, 242, 254, 0.15);
+  background-color: #ffffff; /* Fondo completamente blanco de la página */
+  color: #333333; /* Color predeterminado para el texto */
 }
 
-header h1 {
-    color: #0083b0;
-    text-align: left;
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: 1px;
+/* ==================== BARRA SUPERIOR (TOP BAR) ==================== */
+.top-bar {
+  background-color: #ffffff; /* Fondo blanco */
+  border-bottom: 1px solid #e5e5e5; /* Línea gris clara divisoria inferior */
+  padding: 6px 0; /* Relleno vertical arriba y abajo */
+  font-size: 11px; /* Tamaño de fuente pequeño según la imagen de referencia */
 }
 
-header p {
-    color: #64748b;
-    margin-top: 8px;
-    font-weight: 500;
+.top-bar-container {
+  max-width: 1200px; /* Ancho máximo del contenido central */
+  margin: 0 auto; /* Centra horizontalmente el contenedor */
+  padding: 0 15px; /* Espaciado lateral de seguridad */
+  display: flex; /* Habilita el modo de diseño flexible */
+  justify-content: space-between; /* Empuja un grupo a la izquierda y otro a la derecha */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
 }
 
-.catalogo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    padding: 35px 15px;
-    flex: 1;
+.top-bar-left a {
+  color: #000000; /* Texto de los enlaces en color negro */
+  text-decoration: underline; /* Subraya los enlaces tal como se observa en la captura */
+  margin-right: 15px; /* Separación entre el correo y el teléfono */
 }
 
-/* --- TARJETAS CON EFECTO FUTURISTA AGUA --- */
-.tarjeta-producto {
-    background: linear-gradient(135deg, rgba(15, 32, 67, 0.95), rgba(7, 98, 120, 0.9));
-    border: 1px solid rgba(0, 242, 254, 0.4);
-    border-radius: 16px;
-    width: 290px;
-    padding: 18px;
-    text-align: center;
-    box-shadow: 0 8px 32px 0 rgba(0, 200, 255, 0.25);
-    backdrop-filter: blur(8px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.badge-ssl {
+  background-color: #eab308; /* Fondo dorado/amarillo del sello SSL */
+  color: #000000; /* Texto negro */
+  padding: 2px 6px; /* Relleno interno del sello */
+  border-radius: 10px; /* Bordes totalmente redondeados */
+  font-weight: bold; /* Texto en negrita */
 }
 
-.tarjeta-producto:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px 0 rgba(0, 242, 254, 0.45);
+/* ==================== CABECERA PRINCIPAL (HEADER) ==================== */
+.main-header {
+  padding: 15px 0; /* Separación vertical interna para el header */
+  background-color: #ffffff; /* Fondo blanco */
 }
 
-.tarjeta-producto img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.main-header-container {
+  max-width: 1200px; /* Ancho máximo centrado */
+  margin: 0 auto; /* Centrado automático */
+  padding: 0 15px; /* Relleno lateral */
+  display: flex; /* Disposición en línea de los 3 bloques principales */
+  justify-content: space-between; /* Distribuye el espacio entre los 3 bloques */
+  align-items: center; /* Alineación vertical al centro */
 }
 
-.tarjeta-producto h2 {
-    font-size: 1.3rem;
-    margin: 14px 0 8px 0;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+.header-brand-group {
+  display: flex; /* Junta el menú hamburguesa y el logo uno al lado del otro */
+  align-items: center;
+  gap: 15px; /* Espacio de 15px entre el botón rojo y el logo */
 }
 
-.descripcion {
-    font-size: 0.9rem;
-    color: #e0f7fa;
-    line-height: 1.4;
-    margin-bottom: 12px;
+.menu-btn {
+  background-color: #d0021b; /* Rojo intenso característico de Music Store */
+  color: #ffffff; /* Icono blanco */
+  border: none; /* Sin borde exterior */
+  width: 42px; /* Ancho fijo del botón */
+  height: 40px; /* Altura fija del botón */
+  font-size: 20px; /* Tamaño del icono */
+  border-radius: 3px; /* Esquinas ligeramente redondeadas */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
 }
 
-.precio {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #00ffcc;
-    text-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
-    margin-bottom: 15px;
+.logo h1 {
+  font-size: 26px; /* Tamaño grande de la marca */
+  font-weight: 900; /* Fuente ultra negrita */
+  letter-spacing: -1px; /* Junta ligeramente las letras */
+  line-height: 0.9; /* Reduce la altura entre líneas */
+  color: #000000; /* Texto en negro */
 }
 
-.btn-comprar {
-    background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
-    color: #ffffff;
-    font-weight: bold;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
-    transition: all 0.2s ease;
+.logo-red {
+  color: #d0021b; /* Cambia a rojo la palabra STORE */
 }
 
-.btn-comprar:hover {
-    background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
-    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.7);
+.logo-subtitle {
+  display: block; /* Ocupa su propia línea debajo del nombre */
+  font-size: 13px; /* Tamaño más pequeño */
+  font-weight: bold; /* En negrita */
+  letter-spacing: 2px; /* Separación entre letras */
+  margin-left: 2px; /* Alineamiento fino */
 }
 
-.notificacion {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #00d2ff;
-    color: #002b36;
-    font-weight: bold;
-    padding: 14px 22px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
-    transition: opacity 0.3s;
+.header-benefits {
+  display: flex; /* Alinea los tres avisos en horizontal */
+  gap: 25px; /* Separación entre avisos de envío y productos */
+  font-size: 11px; /* Tamaño de fuente compacto */
+  color: #444444; /* Gris oscuro para el texto secundario */
 }
 
-.oculta {
-    display: none;
+.benefit-item strong {
+  display: block; /* El título del aviso aparece arriba */
+  color: #000000; /* Texto en negro puro */
 }
 
-footer {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.85rem;
-    color: #64748b;
-    border-top: 1px solid #e2e8f0;
+.cart-btn {
+  background-color: #d0021b; /* Fondo rojo igual al botón de menú */
+  color: #ffffff; /* Icono del carrito en blanco */
+  border: none;
+  width: 50px; /* Botón de carrito más ancho */
+  height: 40px;
+  font-size: 18px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* ==================== BARRA DE BÚSQUEDA ==================== */
+.search-section {
+  padding-bottom: 15px; /* Margen inferior antes del banner promocional */
+}
+
+.search-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex; /* Conecta el input y el botón en una sola pieza */
+}
+
+.search-container input {
+  width: 100%; /* Ocupa todo el espacio horizontal disponible */
+  padding: 10px 15px; /* Relleno interno para escribir cómodo */
+  border: 1px solid #cccccc; /* Borde gris claro */
+  border-right: none; /* Elimina el borde derecho para unirlo al botón */
+  outline: none; /* Quita el marco azul al hacer clic */
+  font-size: 14px;
+}
+
+.search-btn {
+  background-color: #d0021b; /* Botón rojo de búsqueda */
+  color: #ffffff; /* Icono blanco */
+  border: 1px solid #d0021b;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ==================== BANNER HERO (IMAGEN Y OFERTA) ==================== */
+.hero-banner {
+  background: linear-gradient(90deg, #1a0205 0%, #75151e 40%, #2e0508 100%); /* Fondo degradado vinotinto/oscuro emulando la foto */
+  height: 280px; /* Altura fija del banner promocional */
+  position: relative; /* Permite posicionar elementos secundarios de forma absoluta adentro */
+  color: #ffffff; /* Todo el texto en blanco */
+  overflow: hidden; /* Corta cualquier elemento sobrante */
+}
+
+.hero-container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative; /* Referencia de posición para los textos dentro del contenedor */
+}
+
+.banner-brand {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-family: 'Georgia', serif; /* Fuente cursiva elegida para simular el logo "Fame" */
+  font-size: 32px;
+  font-style: italic;
+}
+
+.badge-red {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  background-color: #d0021b; /* Etiqueta roja pegada al lado izquierdo */
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 14px;
+  transform: skewX(-10deg); /* Inclina la etiqueta sutilmente en diagonal */
+}
+
+.banner-info {
+  position: absolute;
+  bottom: 45px;
+  left: 20px;
+}
+
+.banner-info h2 {
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Sombra negra detrás del texto para alta legibilidad */
+}
+
+.banner-info p {
+  font-size: 16px;
+  color: #dddddd;
+}
+
+.banner-tagline {
+  position: absolute;
+  top: 25px;
+  right: 180px;
+  font-family: 'Impact', sans-serif;
+  font-size: 28px;
+  color: #ff3333;
+  text-shadow: 1px 1px 0 #ffffff; /* Sombra blanca que crea el efecto de delineado */
+  font-style: italic;
+}
+
+.banner-price {
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  font-family: 'Impact', sans-serif;
+  font-size: 45px;
+  color: #ffffff;
+  font-style: italic;
+}
+
+.banner-price span {
+  color: #d0021b; /* Hace resaltar el precio en rojo */
+  text-shadow: 2px 2px 0 #ffffff; /* Efecto de texto con borde blanco */
+  font-size: 55px;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%); /* Centra los 3 puntos exactamente al medio */
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #ffffff;
+  border-radius: 50%; /* Transforma los divs cuadrados en círculos perfectos */
+}
+
+.dot.active {
+  background-color: #ffffff; /* El punto activo se rellena completamente de blanco */
+}
+
+.feedback-tab {
+  position: absolute;
+  right: 0;
+  top: 30%;
+  background-color: #ffcc00; /* Fondo amarillo vertical derecho */
+  color: #000000;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: bold;
+  writing-mode: vertical-rl; /* Gira el texto verticalmente */
+  border-radius: 4px 0 0 4px;
+}
+
+/* ==================== CONTENIDO PRINCIPAL Y CATEGORÍAS ==================== */
+.main-content {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 25px;
+}
+
+.categories-grid {
+  display: grid; /* Sistema de cuadrícula moderno de CSS */
+  grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales idénticas a la imagen */
+  gap: 20px; /* Separación horizontal y vertical entre tarjetas de producto */
+}
+
+.category-card {
+  display: flex;
+  align-items: center; /* Alinea verticalmente la imagen y la etiqueta */
+  gap: 15px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.category-card img {
+  width: 60px; /* Ancho de la miniatura del instrumento */
+  height: 60px; /* Alto de la miniatura */
+  object-fit: contain; /* Asegura que la imagen no se deforme al adaptarse al tamaño */
+}
+
+.category-card span {
+  font-size: 15px;
+  font-weight: bold;
+  color: #111111;
 }
